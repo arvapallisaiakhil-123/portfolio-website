@@ -106,14 +106,13 @@ function App() {
           <div className="absolute -right-24 top-12 h-64 w-64 rounded-full bg-neon-blue/10 blur-3xl animate-float" />
           <div className="absolute -left-20 bottom-0 h-72 w-72 rounded-full bg-neon-pink/10 blur-3xl animate-float" />
           <div className="absolute inset-x-0 top-1/2 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent" />
-          <div className="grid gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
+          <div className="grid gap-16 lg:grid-cols-[1fr_0.6fr] lg:items-center">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.9, ease: 'easeOut' }}
               className="relative z-10"
             >
-              <p className="mb-4 text-sm uppercase tracking-[0.36em] text-neon-teal/80">Premium student developer portfolio</p>
               <h1 className="text-4xl font-semibold tracking-tight text-white sm:text-5xl lg:text-6xl">
                 <span className="text-neon-gradient">Arvapalli Sai Akhil</span>
               </h1>
@@ -143,26 +142,24 @@ function App() {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1.1, ease: 'easeOut' }}
-              className="relative mx-auto flex max-w-md items-center justify-center"
+              className="relative mx-auto flex items-center justify-center"
             >
-              <div className="relative h-[420px] w-[420px] overflow-hidden rounded-[40px] border border-white/10 bg-gradient-to-br from-white/5 to-slate-900/40 p-6 shadow-glow backdrop-blur-xl">
-                <div className="absolute left-0 top-0 h-20 w-20 rounded-full bg-neon-pink/20 blur-3xl" />
-                <div className="absolute right-4 top-12 h-24 w-24 rounded-full bg-neon-blue/20 blur-3xl" />
-                <div className="absolute inset-0 rounded-[32px] border border-white/5 bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.06),_transparent_49%)]" />
-                <div className="relative flex h-full flex-col items-center justify-center gap-5 text-center">
-                  <div className="h-36 w-36 rounded-full border border-neon-blue/30 bg-gradient-to-br from-slate-950/80 to-slate-900/40 p-1 shadow-[0_0_80px_rgba(59,130,246,0.18)]">
-                    <div className="relative h-full w-full overflow-hidden rounded-full bg-slate-950/90">
-                      <div className="absolute inset-0 rounded-full bg-[radial-gradient(circle,_rgba(79,70,229,0.35),_transparent_30%)]" />
-                      <div className="absolute inset-0 animate-float bg-[radial-gradient(circle,_rgba(16,185,129,0.16),_transparent_35%)]" />
-                      <div className="relative flex h-full items-center justify-center text-xs uppercase tracking-[0.25em] text-slate-200/70">Profile</div>
-                    </div>
+              <div className="relative flex flex-col items-center justify-center gap-6">
+                <motion.div
+                  animate={{ y: [0, -12, 0] }}
+                  transition={{ duration: 4, ease: 'easeInOut', repeat: Infinity }}
+                  className="relative"
+                >
+                  <div className="absolute inset-0 rounded-full bg-gradient-to-r from-neon-blue/30 to-neon-pink/30 blur-2xl" />
+                  <div className="relative h-48 w-48 overflow-hidden rounded-full border-2 border-neon-blue/40 bg-gradient-to-br from-slate-950 to-slate-900 p-1 shadow-[0_0_100px_rgba(59,130,246,0.25)]">
+                    <img
+                      src="https://media.licdn.com/dms/image/v2/D5635AQGwSu-bS_PrYg/profile-framedphoto-shrink_800_800/B56Z3xJB5JK0Ag-/0/1777867169622?e=1779296400&v=beta&t=pMkXEL3-tNwYTv4th0bEiKlQ24TV73Kes7JF3Upjmvs"
+                      alt="Sai Akhil"
+                      className="relative h-full w-full overflow-hidden rounded-full object-cover"
+                    />
                   </div>
-                  <div className="space-y-3">
-                    <p className="text-sm uppercase tracking-[0.3em] text-slate-300/70">Developer</p>
-                    <div className="text-2xl font-semibold text-white">Futuristic UI</div>
-                    <p className="max-w-xs text-sm leading-6 text-slate-400">Immersive glassmorphism, soft neon glow, and smart animations for an internship-ready portfolio.</p>
-                  </div>
-                </div>
+                </motion.div>
+                <p className="text-sm uppercase tracking-[0.3em] text-neon-teal">Developer</p>
               </div>
             </motion.div>
           </div>
