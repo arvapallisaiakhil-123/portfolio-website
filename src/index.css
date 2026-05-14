@@ -49,6 +49,7 @@ body::before {
   inset: 0;
   background-image: radial-gradient(circle at top left, rgba(79, 70, 229, 0.18), transparent 12%), radial-gradient(circle at top right, rgba(45, 212, 191, 0.12), transparent 18%), radial-gradient(circle at bottom left, rgba(234, 179, 8, 0.12), transparent 16%);
   pointer-events: none;
+  animation: drift 20s ease-in-out infinite;
 }
 
 body::after {
@@ -59,6 +60,7 @@ body::after {
   opacity: 0.85;
   pointer-events: none;
   mix-blend-mode: screen;
+  animation: float 25s ease-in-out infinite reverse;
 }
 
 .hero-glow {
